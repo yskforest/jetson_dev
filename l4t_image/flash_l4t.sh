@@ -1,6 +1,6 @@
 # https://developer.nvidia.com/embedded/jetpack-archive
-MAJOR=35
-MINOR=4.1
+MAJOR=36
+MINOR=4.3
 L4T_RELEASE_PACKAGE=Jetson_Linux_R${MAJOR}.${MINOR}_aarch64.tbz2
 SAMPLE_FS_PACKAGE=Tegra_Linux_Sample-Root-Filesystem_R${MAJOR}.${MINOR}_aarch64.tbz2
 RELEASE_ADDR=https://developer.download.nvidia.com/embedded/L4T/r${MAJOR}_Release_v${MINOR}/release
@@ -24,5 +24,5 @@ BOARD=jetson-orin-nano-devkit  # Jetson Orin Nano DK
 
 # cd Linux_for_Tegra && \
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device ${STORAGE_DEVIVE} \
-    -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
+    -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/generic/cfg/flash_t234_qspi.xml" \
     --showlogs --network usb0 ${BOARD} internal
